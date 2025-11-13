@@ -16,6 +16,7 @@ This project implements and evaluates various RNN architectures for binary senti
 ## Repository Structure
 
 ```
+MSML641_RNN_ANALYSIS/
 ├── data/
 │   ├── download_data.py          # Dataset downloading and processing
 │   ├── raw                       # Raw data
