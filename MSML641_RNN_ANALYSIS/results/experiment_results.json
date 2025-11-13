@@ -1,0 +1,187 @@
+{
+  "LSTM_ReLU_Adam_seq50": {
+    "accuracy": 0.76352,
+    "f1_score": 0.7609221858265341,
+    "epoch_time": 72.35515580177307,
+    "total_time": 361.77577900886536,
+    "config": {
+      "name": "LSTM_ReLU_Adam_seq50",
+      "rnn_type": "lstm",
+      "activation": "relu",
+      "optimizer": "adam",
+      "seq_len": 50
+    }
+  },
+  "RNN_ReLU_Adam_seq50": {
+    "accuracy": 0.56936,
+    "f1_score": 0.5634944804781206,
+    "epoch_time": 31.04532437324524,
+    "total_time": 155.2266218662262,
+    "config": {
+      "name": "RNN_ReLU_Adam_seq50",
+      "rnn_type": "rnn",
+      "activation": "relu",
+      "optimizer": "adam",
+      "seq_len": 50
+    }
+  },
+  "BiLSTM_ReLU_Adam_seq50": {
+    "accuracy": 0.76536,
+    "f1_score": 0.7653581604079776,
+    "epoch_time": 146.48547916412355,
+    "total_time": 732.4273958206177,
+    "config": {
+      "name": "BiLSTM_ReLU_Adam_seq50",
+      "rnn_type": "lstm",
+      "activation": "relu",
+      "optimizer": "adam",
+      "seq_len": 50,
+      "bidirectional": true
+    }
+  },
+  "LSTM_Sigmoid_Adam_seq50": {
+    "accuracy": 0.7658,
+    "f1_score": 0.7650062063807469,
+    "epoch_time": 73.39943838119507,
+    "total_time": 366.99719190597534,
+    "config": {
+      "name": "LSTM_Sigmoid_Adam_seq50",
+      "rnn_type": "lstm",
+      "activation": "sigmoid",
+      "optimizer": "adam",
+      "seq_len": 50
+    }
+  },
+  "LSTM_Tanh_Adam_seq50": {
+    "accuracy": 0.77188,
+    "f1_score": 0.7716761491781228,
+    "epoch_time": 71.95495438575745,
+    "total_time": 359.77477192878723,
+    "config": {
+      "name": "LSTM_Tanh_Adam_seq50",
+      "rnn_type": "lstm",
+      "activation": "tanh",
+      "optimizer": "adam",
+      "seq_len": 50
+    }
+  },
+  "LSTM_ReLU_SGD_seq50": {
+    "accuracy": 0.49672,
+    "f1_score": 0.49651210864128703,
+    "epoch_time": 85.17794818878174,
+    "total_time": 425.8897409439087,
+    "config": {
+      "name": "LSTM_ReLU_SGD_seq50",
+      "rnn_type": "lstm",
+      "activation": "relu",
+      "optimizer": "sgd",
+      "seq_len": 50
+    }
+  },
+  "LSTM_ReLU_RMSprop_seq50": {
+    "accuracy": 0.75996,
+    "f1_score": 0.7598818555668867,
+    "epoch_time": 90.3268452167511,
+    "total_time": 451.6342260837555,
+    "config": {
+      "name": "LSTM_ReLU_RMSprop_seq50",
+      "rnn_type": "lstm",
+      "activation": "relu",
+      "optimizer": "rmsprop",
+      "seq_len": 50
+    }
+  },
+  "LSTM_ReLU_Adam_seq25": {
+    "accuracy": 0.72536,
+    "f1_score": 0.7253484672722802,
+    "epoch_time": 52.60870680809021,
+    "total_time": 263.04353404045105,
+    "config": {
+      "name": "LSTM_ReLU_Adam_seq25",
+      "rnn_type": "lstm",
+      "activation": "relu",
+      "optimizer": "adam",
+      "seq_len": 25
+    }
+  },
+  "LSTM_ReLU_Adam_seq100": {
+    "accuracy": 0.77016,
+    "f1_score": 0.7697043669066754,
+    "epoch_time": 172.18502922058104,
+    "total_time": 860.9251461029053,
+    "config": {
+      "name": "LSTM_ReLU_Adam_seq100",
+      "rnn_type": "lstm",
+      "activation": "relu",
+      "optimizer": "adam",
+      "seq_len": 100
+    }
+  },
+  "LSTM_ReLU_Adam_seq50_clip": {
+    "accuracy": 0.75512,
+    "f1_score": 0.7533831847029138,
+    "epoch_time": 96.29729580879211,
+    "total_time": 481.48647904396057,
+    "config": {
+      "name": "LSTM_ReLU_Adam_seq50_clip",
+      "rnn_type": "lstm",
+      "activation": "relu",
+      "optimizer": "adam",
+      "seq_len": 50,
+      "grad_clip": 1.0
+    }
+  },
+  "RNN_Tanh_Adam_seq50": {
+    "accuracy": 0.58556,
+    "f1_score": 0.5534589043958678,
+    "epoch_time": 39.84815678596497,
+    "total_time": 199.24078392982483,
+    "config": {
+      "name": "RNN_Tanh_Adam_seq50",
+      "rnn_type": "rnn",
+      "activation": "tanh",
+      "optimizer": "adam",
+      "seq_len": 50
+    }
+  },
+  "BiLSTM_Tanh_Adam_seq50": {
+    "accuracy": 0.76612,
+    "f1_score": 0.7659613026656497,
+    "epoch_time": 184.8731150150299,
+    "total_time": 924.3655750751495,
+    "config": {
+      "name": "BiLSTM_Tanh_Adam_seq50",
+      "rnn_type": "lstm",
+      "activation": "tanh",
+      "optimizer": "adam",
+      "seq_len": 50,
+      "bidirectional": true
+    }
+  },
+  "LSTM_Tanh_RMSprop_seq50": {
+    "accuracy": 0.76256,
+    "f1_score": 0.7610213460693626,
+    "epoch_time": 89.8609176158905,
+    "total_time": 449.3045880794525,
+    "config": {
+      "name": "LSTM_Tanh_RMSprop_seq50",
+      "rnn_type": "lstm",
+      "activation": "tanh",
+      "optimizer": "rmsprop",
+      "seq_len": 50
+    }
+  },
+  "RNN_ReLU_Adam_seq100": {
+    "accuracy": 0.57848,
+    "f1_score": 0.5363745319740936,
+    "epoch_time": 113.70149521827697,
+    "total_time": 568.5074760913849,
+    "config": {
+      "name": "RNN_ReLU_Adam_seq100",
+      "rnn_type": "rnn",
+      "activation": "relu",
+      "optimizer": "adam",
+      "seq_len": 100
+    }
+  }
+}

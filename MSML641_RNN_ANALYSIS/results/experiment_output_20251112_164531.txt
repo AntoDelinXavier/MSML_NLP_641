@@ -1,0 +1,353 @@
+======================================================================
+COMPARATIVE ANALYSIS OF RNN ARCHITECTURES FOR SENTIMENT CLASSIFICATION
+======================================================================
+Output logged to: results/experiment_output_20251112_164531.txt
+Start time: 2025-11-12 16:45:31
+
+HARDWARE INFORMATION:
+  device: CPU
+  cpu_cores: 4
+  cuda_available: False
+
+==================================================
+STEP 1: DATA PROCESSING
+==================================================
+Processed data already exists. Skipping data processing.
+
+==================================================
+STEP 2: DATA PREPROCESSING
+==================================================
+Loading IMDB data
+Training data: 25000 samples
+Test data: 25000 samples
+Building vocabulary
+Vocabulary size: 10000
+Top 10 words: [('the', 332877), ('a', 160994), ('and', 160905), ('of', 144473), ('to', 133497), ('is', 105300), ('in', 93212), ('it', 76017), ('i', 75609), ('this', 74609)]
+
+Preparing sequences of length 25
+Converting training texts to sequences
+Converting test texts to sequences
+Sequence length 25:
+  Training batches: 782
+  Test batches: 782
+
+Preparing sequences of length 50
+Converting training texts to sequences
+Converting test texts to sequences
+Sequence length 50:
+  Training batches: 782
+  Test batches: 782
+
+Preparing sequences of length 100
+Converting training texts to sequences
+Converting test texts to sequences
+Sequence length 100:
+  Training batches: 782
+  Test batches: 782
+
+==================================================
+STEP 3: RUNNING EXPERIMENTS
+==================================================
+Total experiments to run: 14
+Breakdown:
+  - Core systematic combinations: 10
+  - Critical extra combinations: 4
+
+Experiment List:
+   1. LSTM_ReLU_Adam_seq50
+   2. RNN_ReLU_Adam_seq50
+   3. BiLSTM_ReLU_Adam_seq50
+   4. LSTM_Sigmoid_Adam_seq50
+   5. LSTM_Tanh_Adam_seq50
+   6. LSTM_ReLU_SGD_seq50
+   7. LSTM_ReLU_RMSprop_seq50
+   8. LSTM_ReLU_Adam_seq25
+   9. LSTM_ReLU_Adam_seq100
+  10. LSTM_ReLU_Adam_seq50_clip
+  11. RNN_Tanh_Adam_seq50
+  12. BiLSTM_Tanh_Adam_seq50
+  13. LSTM_Tanh_RMSprop_seq50
+  14. RNN_ReLU_Adam_seq100
+
+============================================================
+EXPERIMENT: LSTM_ReLU_Adam_seq50
+============================================================
+Starting training on cpu
+Configuration: {'optimizer': 'adam', 'learning_rate': 0.001, 'grad_clip': None}
+Epoch 1/5: Train Loss: 0.6773, Val Acc: 0.5740, Time: 70.48s
+Epoch 2/5: Train Loss: 0.6034, Val Acc: 0.7190, Time: 69.65s
+Epoch 3/5: Train Loss: 0.5354, Val Acc: 0.7464, Time: 68.29s
+Epoch 4/5: Train Loss: 0.4767, Val Acc: 0.7610, Time: 69.01s
+Epoch 5/5: Train Loss: 0.4417, Val Acc: 0.7635, Time: 70.11s
+Total training time: 347.55s
+RESULTS for LSTM_ReLU_Adam_seq50:
+  Accuracy: 0.7635
+  F1-Score: 0.7609
+  Avg Epoch Time: 72.36s
+  Total Time: 361.78s
+
+============================================================
+EXPERIMENT: RNN_ReLU_Adam_seq50
+============================================================
+Starting training on cpu
+Configuration: {'optimizer': 'adam', 'learning_rate': 0.001, 'grad_clip': None}
+Epoch 1/5: Train Loss: 0.6933, Val Acc: 0.5471, Time: 29.91s
+Epoch 2/5: Train Loss: 0.6872, Val Acc: 0.5503, Time: 30.12s
+Epoch 3/5: Train Loss: 0.6770, Val Acc: 0.5950, Time: 29.82s
+Epoch 4/5: Train Loss: 0.6687, Val Acc: 0.5415, Time: 30.52s
+Epoch 5/5: Train Loss: 0.6684, Val Acc: 0.5694, Time: 29.99s
+Total training time: 150.36s
+RESULTS for RNN_ReLU_Adam_seq50:
+  Accuracy: 0.5694
+  F1-Score: 0.5635
+  Avg Epoch Time: 31.05s
+  Total Time: 155.23s
+
+============================================================
+EXPERIMENT: BiLSTM_ReLU_Adam_seq50
+============================================================
+Starting training on cpu
+Configuration: {'optimizer': 'adam', 'learning_rate': 0.001, 'grad_clip': None}
+Epoch 1/5: Train Loss: 0.6813, Val Acc: 0.6430, Time: 140.33s
+Epoch 2/5: Train Loss: 0.6305, Val Acc: 0.7042, Time: 140.69s
+Epoch 3/5: Train Loss: 0.5482, Val Acc: 0.7324, Time: 143.11s
+Epoch 4/5: Train Loss: 0.5041, Val Acc: 0.7523, Time: 141.04s
+Epoch 5/5: Train Loss: 0.4575, Val Acc: 0.7654, Time: 140.49s
+Total training time: 705.65s
+RESULTS for BiLSTM_ReLU_Adam_seq50:
+  Accuracy: 0.7654
+  F1-Score: 0.7654
+  Avg Epoch Time: 146.49s
+  Total Time: 732.43s
+
+============================================================
+EXPERIMENT: LSTM_Sigmoid_Adam_seq50
+============================================================
+Starting training on cpu
+Configuration: {'optimizer': 'adam', 'learning_rate': 0.001, 'grad_clip': None}
+Epoch 1/5: Train Loss: 0.6856, Val Acc: 0.6172, Time: 69.58s
+Epoch 2/5: Train Loss: 0.6163, Val Acc: 0.7023, Time: 71.78s
+Epoch 3/5: Train Loss: 0.5485, Val Acc: 0.7380, Time: 70.64s
+Epoch 4/5: Train Loss: 0.4950, Val Acc: 0.7553, Time: 70.07s
+Epoch 5/5: Train Loss: 0.4555, Val Acc: 0.7658, Time: 71.17s
+Total training time: 353.25s
+RESULTS for LSTM_Sigmoid_Adam_seq50:
+  Accuracy: 0.7658
+  F1-Score: 0.7650
+  Avg Epoch Time: 73.40s
+  Total Time: 367.00s
+
+============================================================
+EXPERIMENT: LSTM_Tanh_Adam_seq50
+============================================================
+Starting training on cpu
+Configuration: {'optimizer': 'adam', 'learning_rate': 0.001, 'grad_clip': None}
+Epoch 1/5: Train Loss: 0.6866, Val Acc: 0.6192, Time: 69.57s
+Epoch 2/5: Train Loss: 0.6317, Val Acc: 0.6972, Time: 70.85s
+Epoch 3/5: Train Loss: 0.5527, Val Acc: 0.7404, Time: 68.50s
+Epoch 4/5: Train Loss: 0.4938, Val Acc: 0.7603, Time: 68.45s
+Epoch 5/5: Train Loss: 0.4484, Val Acc: 0.7719, Time: 69.22s
+Total training time: 346.58s
+RESULTS for LSTM_Tanh_Adam_seq50:
+  Accuracy: 0.7719
+  F1-Score: 0.7717
+  Avg Epoch Time: 71.95s
+  Total Time: 359.77s
+
+============================================================
+EXPERIMENT: LSTM_ReLU_SGD_seq50
+============================================================
+Starting training on cpu
+Configuration: {'optimizer': 'sgd', 'learning_rate': 0.001, 'grad_clip': None}
+Epoch 1/5: Train Loss: 0.6933, Val Acc: 0.4933, Time: 64.08s
+Epoch 2/5: Train Loss: 0.6935, Val Acc: 0.4941, Time: 64.94s
+Epoch 3/5: Train Loss: 0.6934, Val Acc: 0.4940, Time: 88.15s
+Epoch 4/5: Train Loss: 0.6933, Val Acc: 0.4956, Time: 107.84s
+Epoch 5/5: Train Loss: 0.6935, Val Acc: 0.4967, Time: 81.44s
+Total training time: 406.44s
+RESULTS for LSTM_ReLU_SGD_seq50:
+  Accuracy: 0.4967
+  F1-Score: 0.4965
+  Avg Epoch Time: 85.18s
+  Total Time: 425.89s
+
+============================================================
+EXPERIMENT: LSTM_ReLU_RMSprop_seq50
+============================================================
+Starting training on cpu
+Configuration: {'optimizer': 'rmsprop', 'learning_rate': 0.001, 'grad_clip': None}
+Epoch 1/5: Train Loss: 0.6725, Val Acc: 0.6516, Time: 90.52s
+Epoch 2/5: Train Loss: 0.6157, Val Acc: 0.7007, Time: 85.27s
+Epoch 3/5: Train Loss: 0.5629, Val Acc: 0.7293, Time: 88.71s
+Epoch 4/5: Train Loss: 0.5195, Val Acc: 0.7273, Time: 85.24s
+Epoch 5/5: Train Loss: 0.4847, Val Acc: 0.7600, Time: 84.60s
+Total training time: 434.35s
+RESULTS for LSTM_ReLU_RMSprop_seq50:
+  Accuracy: 0.7600
+  F1-Score: 0.7599
+  Avg Epoch Time: 90.33s
+  Total Time: 451.63s
+
+============================================================
+EXPERIMENT: LSTM_ReLU_Adam_seq25
+============================================================
+Starting training on cpu
+Configuration: {'optimizer': 'adam', 'learning_rate': 0.001, 'grad_clip': None}
+Epoch 1/5: Train Loss: 0.6777, Val Acc: 0.6218, Time: 50.48s
+Epoch 2/5: Train Loss: 0.6146, Val Acc: 0.6906, Time: 52.62s
+Epoch 3/5: Train Loss: 0.5559, Val Acc: 0.7090, Time: 51.09s
+Epoch 4/5: Train Loss: 0.5136, Val Acc: 0.7127, Time: 50.30s
+Epoch 5/5: Train Loss: 0.4836, Val Acc: 0.7254, Time: 49.63s
+Total training time: 254.11s
+RESULTS for LSTM_ReLU_Adam_seq25:
+  Accuracy: 0.7254
+  F1-Score: 0.7253
+  Avg Epoch Time: 52.61s
+  Total Time: 263.04s
+
+============================================================
+EXPERIMENT: LSTM_ReLU_Adam_seq100
+============================================================
+Starting training on cpu
+Configuration: {'optimizer': 'adam', 'learning_rate': 0.001, 'grad_clip': None}
+Epoch 1/5: Train Loss: 0.6818, Val Acc: 0.6238, Time: 168.46s
+Epoch 2/5: Train Loss: 0.6531, Val Acc: 0.5762, Time: 164.95s
+Epoch 3/5: Train Loss: 0.6692, Val Acc: 0.5841, Time: 166.50s
+Epoch 4/5: Train Loss: 0.6508, Val Acc: 0.7252, Time: 164.32s
+Epoch 5/5: Train Loss: 0.5328, Val Acc: 0.7702, Time: 165.03s
+Total training time: 829.27s
+RESULTS for LSTM_ReLU_Adam_seq100:
+  Accuracy: 0.7702
+  F1-Score: 0.7697
+  Avg Epoch Time: 172.19s
+  Total Time: 860.93s
+
+============================================================
+EXPERIMENT: LSTM_ReLU_Adam_seq50_clip
+============================================================
+Starting training on cpu
+Configuration: {'optimizer': 'adam', 'learning_rate': 0.001, 'grad_clip': 1.0}
+Epoch 1/5: Train Loss: 0.6828, Val Acc: 0.5724, Time: 89.56s
+Epoch 2/5: Train Loss: 0.6740, Val Acc: 0.6074, Time: 104.99s
+Epoch 3/5: Train Loss: 0.6173, Val Acc: 0.6935, Time: 90.54s
+Epoch 4/5: Train Loss: 0.5393, Val Acc: 0.7497, Time: 89.06s
+Epoch 5/5: Train Loss: 0.4823, Val Acc: 0.7551, Time: 90.04s
+Total training time: 464.19s
+RESULTS for LSTM_ReLU_Adam_seq50_clip:
+  Accuracy: 0.7551
+  F1-Score: 0.7534
+  Avg Epoch Time: 96.30s
+  Total Time: 481.49s
+
+============================================================
+EXPERIMENT: RNN_Tanh_Adam_seq50
+============================================================
+Starting training on cpu
+Configuration: {'optimizer': 'adam', 'learning_rate': 0.001, 'grad_clip': None}
+Epoch 1/5: Train Loss: 0.6951, Val Acc: 0.5486, Time: 39.63s
+Epoch 2/5: Train Loss: 0.6829, Val Acc: 0.5362, Time: 39.21s
+Epoch 3/5: Train Loss: 0.6927, Val Acc: 0.5283, Time: 38.68s
+Epoch 4/5: Train Loss: 0.6897, Val Acc: 0.5659, Time: 37.77s
+Epoch 5/5: Train Loss: 0.6731, Val Acc: 0.5856, Time: 37.63s
+Total training time: 192.92s
+RESULTS for RNN_Tanh_Adam_seq50:
+  Accuracy: 0.5856
+  F1-Score: 0.5535
+  Avg Epoch Time: 39.85s
+  Total Time: 199.24s
+
+============================================================
+EXPERIMENT: BiLSTM_Tanh_Adam_seq50
+============================================================
+Starting training on cpu
+Configuration: {'optimizer': 'adam', 'learning_rate': 0.001, 'grad_clip': None}
+Epoch 1/5: Train Loss: 0.6766, Val Acc: 0.6431, Time: 178.64s
+Epoch 2/5: Train Loss: 0.6130, Val Acc: 0.7180, Time: 176.77s
+Epoch 3/5: Train Loss: 0.5424, Val Acc: 0.7356, Time: 177.09s
+Epoch 4/5: Train Loss: 0.4891, Val Acc: 0.7430, Time: 175.54s
+Epoch 5/5: Train Loss: 0.4481, Val Acc: 0.7661, Time: 182.52s
+Total training time: 890.55s
+RESULTS for BiLSTM_Tanh_Adam_seq50:
+  Accuracy: 0.7661
+  F1-Score: 0.7660
+  Avg Epoch Time: 184.87s
+  Total Time: 924.37s
+
+============================================================
+EXPERIMENT: LSTM_Tanh_RMSprop_seq50
+============================================================
+Starting training on cpu
+Configuration: {'optimizer': 'rmsprop', 'learning_rate': 0.001, 'grad_clip': None}
+Epoch 1/5: Train Loss: 0.6710, Val Acc: 0.6264, Time: 86.07s
+Epoch 2/5: Train Loss: 0.5926, Val Acc: 0.7142, Time: 87.16s
+Epoch 3/5: Train Loss: 0.5308, Val Acc: 0.7446, Time: 85.51s
+Epoch 4/5: Train Loss: 0.4843, Val Acc: 0.7616, Time: 86.35s
+Epoch 5/5: Train Loss: 0.4518, Val Acc: 0.7626, Time: 87.38s
+Total training time: 432.46s
+RESULTS for LSTM_Tanh_RMSprop_seq50:
+  Accuracy: 0.7626
+  F1-Score: 0.7610
+  Avg Epoch Time: 89.86s
+  Total Time: 449.30s
+
+============================================================
+EXPERIMENT: RNN_ReLU_Adam_seq100
+============================================================
+Starting training on cpu
+Configuration: {'optimizer': 'adam', 'learning_rate': 0.001, 'grad_clip': None}
+Epoch 1/5: Train Loss: 0.6927, Val Acc: 0.5492, Time: 66.88s
+Epoch 2/5: Train Loss: 0.6848, Val Acc: 0.5007, Time: 118.99s
+Epoch 3/5: Train Loss: 0.6892, Val Acc: 0.5602, Time: 148.67s
+Epoch 4/5: Train Loss: 0.6764, Val Acc: 0.6179, Time: 103.70s
+Epoch 5/5: Train Loss: 0.6692, Val Acc: 0.5785, Time: 119.39s
+Total training time: 557.63s
+RESULTS for RNN_ReLU_Adam_seq100:
+  Accuracy: 0.5785
+  F1-Score: 0.5364
+  Avg Epoch Time: 113.70s
+  Total Time: 568.51s
+
+==================================================
+STEP 4: RESULTS ANALYSIS
+==================================================
+
+COMPREHENSIVE SUMMARY TABLE:
+====================================================================================================
+  Model Activation Optimizer  Seq_Length Grad_Clipping  Accuracy     F1  Epoch_Time_s
+   LSTM       Relu      Adam          50            No    0.7635 0.7609       72.3552
+    RNN       Relu      Adam          50            No    0.5694 0.5635       31.0453
+LSTM-Bi       Relu      Adam          50            No    0.7654 0.7654      146.4855
+   LSTM    Sigmoid      Adam          50            No    0.7658 0.7650       73.3994
+   LSTM       Tanh      Adam          50            No    0.7719 0.7717       71.9550
+   LSTM       Relu       Sgd          50            No    0.4967 0.4965       85.1779
+   LSTM       Relu   Rmsprop          50            No    0.7600 0.7599       90.3268
+   LSTM       Relu      Adam          25            No    0.7254 0.7253       52.6087
+   LSTM       Relu      Adam         100            No    0.7702 0.7697      172.1850
+   LSTM       Relu      Adam          50           Yes    0.7551 0.7534       96.2973
+    RNN       Tanh      Adam          50            No    0.5856 0.5535       39.8482
+LSTM-Bi       Tanh      Adam          50            No    0.7661 0.7660      184.8731
+   LSTM       Tanh   Rmsprop          50            No    0.7626 0.7610       89.8609
+    RNN       Relu      Adam         100            No    0.5785 0.5364      113.7015
+====================================================================================================
+BEST AND WORST CONFIGURATIONS
+============================================================
+BEST: LSTM_Tanh_Adam_seq50
+  Accuracy: 0.7719
+  F1-Score: 0.7717
+  Configuration: {'name': 'LSTM_Tanh_Adam_seq50', 'rnn_type': 'lstm', 'activation': 'tanh', 'optimizer': 'adam', 'seq_len': 50}
+
+WORST: LSTM_ReLU_SGD_seq50
+  Accuracy: 0.4967
+  F1-Score: 0.4965
+  Configuration: {'name': 'LSTM_ReLU_SGD_seq50', 'rnn_type': 'lstm', 'activation': 'relu', 'optimizer': 'sgd', 'seq_len': 50}
+============================================================
+PROJECT COMPLETED SUMMARY
+============================================================
+Results saved in results/ directory
+Total experiments completed: 14
+Total experiment time: 110.0 minutes
+Best model: LSTM_Tanh_Adam_seq50
+Best accuracy: 0.7719
+Worst model: LSTM_ReLU_SGD_seq50
+Worst accuracy: 0.4967
+
